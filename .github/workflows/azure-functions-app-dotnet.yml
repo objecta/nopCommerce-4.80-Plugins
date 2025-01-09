@@ -28,6 +28,6 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     - uses: softprops/action-gh-release@v2
       with:
-       files: /home/runner/work/Presentation/Nop.Web/Plugins/Payments.Unzer/*
+       files: /home/runner/work/nopCommerce-4.80-Plugins/Presentation/Nop.Web/Plugins/Payments.Unzer/*
        body: "nopCommerce Plugin"
        tag_name: ${{ github.ref_name }}      
