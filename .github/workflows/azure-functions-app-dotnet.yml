@@ -6,7 +6,7 @@ name: .NET
 on:
   push:
     paths:
-      - ".github/workflows/upper-cross.yml"
+      - ".github/azure-functions-app-dotnet.yml"
       - "Plugins/Unzer.Plugin.Payments.Unzer/**"
 
 jobs:
