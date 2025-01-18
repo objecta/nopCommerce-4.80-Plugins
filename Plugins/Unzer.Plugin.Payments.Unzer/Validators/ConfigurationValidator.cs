@@ -14,9 +14,9 @@ namespace Unzer.Plugin.Payments.Unzer.Validators
 
         public ConfigurationValidator(ILocalizationService localizationService)
         {
-            //RuleFor(model => model.GateWayURL)
-            //    .NotEmpty()
-            //    .WithMessageAwait(localizationService.GetResourceAsync("Plugins.Payments.Unzer.Fields.GateWayURL.Required"));
+            RuleFor(model => model.UnzerApiBaseUrl)
+                .NotEmpty()
+                .WithMessageAwait(localizationService.GetResourceAsync("Plugins.Payments.Unzer.Fields.GateWayURL.Required"));
 
             //RuleFor(model => model.AutoCapture)
             //    .NotEmpty()
