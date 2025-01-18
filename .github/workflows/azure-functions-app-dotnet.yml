@@ -26,8 +26,15 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+    - name: Archive Release
+      uses: thedoctor0/zip-release@0.7.5
+      with:
+        type: 'zip'
+        directory: /home/runner/work/nopCommerce-4.80-Plugins/nopCommerce-4.80-Plugins/Presentation/Nop.Web/Plugins/Payments.Unzer/
+        filename: 'nop4.80-Payments.Unzer-V1.zip'
     - uses: softprops/action-gh-release@v2
       with:
-       files: ./Presentation/Nop.Web/Plugins/Payments.Unzer/*
-       body: "nopCommerce Plugin"
+       files: |
+         /home/runner/work/nopCommerce-4.80-Plugins/nopCommerce-4.80-Plugins/Presentation/Nop.Web/Plugins/Payments.Unzer/nop4.80-Payments.Unzer-V1.zip
+       body: "nopCommerce Plugin Unzer Payment"
        tag_name: ${{ github.ref_name }}      
