@@ -18,6 +18,10 @@ namespace Unzer.Plugin.Payments.Unzer.Validators
                 .NotEmpty()
                 .WithMessageAwait(localizationService.GetResourceAsync("Plugins.Payments.Unzer.Fields.GateWayURL.Required"));
 
+            RuleFor(model => model.UnzerApiKey)
+                .NotEmpty()
+                .WithMessageAwait(localizationService.GetResourceAsync("Plugins.Payments.Unzer.Fields.UnzerApiKey.Required"));
+
             RuleFor(model => model.AutoCapture)
                 .IsInEnum()
                 .WithMessageAwait(localizationService.GetResourceAsync("Plugins.Payments.Unzer.Fields.AutoCapture.Required"));
