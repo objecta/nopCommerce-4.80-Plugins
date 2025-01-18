@@ -18,9 +18,9 @@ namespace Unzer.Plugin.Payments.Unzer.Validators
                 .NotEmpty()
                 .WithMessageAwait(localizationService.GetResourceAsync("Plugins.Payments.Unzer.Fields.GateWayURL.Required"));
 
-            //RuleFor(model => model.AutoCapture)
-            //    .NotEmpty()
-            //    .WithMessageAwait(localizationService.GetResourceAsync("Plugins.Payments.Unzer.Fields.AutoCapture.Required"));
+            RuleFor(model => model.AutoCapture)
+                .IsInEnum()
+                .WithMessageAwait(localizationService.GetResourceAsync("Plugins.Payments.Unzer.Fields.AutoCapture.Required"));
 
             //RuleFor(model => model.TextOnStatement)
             //    .MaximumLength(22)
