@@ -25,12 +25,6 @@ namespace Unzer.Plugin.Payments.Unzer.Validators
             RuleFor(model => model.AutoCapture)
                 .IsInEnum()
                 .WithMessageAwait(localizationService.GetResourceAsync("Plugins.Payments.Unzer.Fields.AutoCapture.Required"));
-
-            //RuleFor(model => model.TextOnStatement)
-            //    .MaximumLength(22)
-            //    .WithMessageAwait(localizationService.GetResourceAsync("Plugins.Payments.Unzer.Fields.TextOnStatement.NoLongerThen22Chars"))
-            //    .Matches("[ -~]+")
-            //    .WithMessageAwait(localizationService.GetResourceAsync("Plugins.Payments.Unzer.Fields.TextOnStatement.MustBeReadable"));
         }
 
         #endregion
