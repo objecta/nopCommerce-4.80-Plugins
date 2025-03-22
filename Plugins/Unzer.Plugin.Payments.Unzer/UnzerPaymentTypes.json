@@ -135,7 +135,7 @@
     "UnzerName": "sofort",
     "SupportAuthurize": false,
     "SupportCharge": true,
-    "Deprecated": false,
+    "Deprecated": true,
     "Prepayment": false
   },
   {
